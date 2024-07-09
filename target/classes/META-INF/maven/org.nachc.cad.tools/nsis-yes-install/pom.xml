@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
+    <modelVersion>4.0.0</modelVersion>
+
+    <properties>
+		<version>1.0.001</version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <groupId>org.nachc.cad.tools</groupId>
+    <artifactId>nsis-yes-install</artifactId>
+    <version>${version}</version>
+
+    <packaging>jar</packaging>
+
+    <name>NSIS - Nullsoft Scriptable Install System (NSIS) Installer for _YES Eclipse Environment</name>
+	<description>
+		This project contains the NSIS script for the _YES build.  
+	</description>
+	<url>https://github.com/NACHC-CAD/nsis-yes-install</url>
+
+	<licenses>
+	    <license>
+	      <name>Apache License, Version 2.0</name>
+	      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+	      <distribution>repo</distribution>
+	    </license>
+	</licenses>
+  
+    <developers>
+	    <developer>
+		    <name>John Gresh</name>
+		    <email>johngresh@curlewconsulting.com</email>
+		    <organization>NACHC</organization>
+		    <organizationUrl>https.www.nachc.org</organizationUrl>
+	    </developer>
+    </developers>
+
+	<!-- 
+	*
+	* dependencies
+	*
+	-->
+
+	<dependencies>
+	</dependencies>
+
+	<!-- 
+	*
+	* build
+	*
+	-->
+
+	<build>
+	</build>
+    
+</project>
