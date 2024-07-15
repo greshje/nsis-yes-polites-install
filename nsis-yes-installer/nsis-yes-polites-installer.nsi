@@ -41,10 +41,10 @@
 !define GIT_PATH "C:\_YES_POLITES\tools\git\Git-2.27.0\bin;"
 !define MVN_PATH "C:\_YES_POLITES\tools\mvn\apache-maven-3.6.3\bin;"
 !define BAT_PATH "C:\_YES_POLITES\tools\bat;"
-!define R_PATH "C:\_YES_POLITES\tools\r\R\R-4.2.2\bin;"
+!define R_PATH "C:\_YES_POLITES\tools\r\R\R-4.2.3\bin;"
 
 # definitions
-Outfile "YesPolitesInstaller-1.0.001.exe"
+Outfile "YesPolitesInstaller-1.0.002.exe"
 InstallDir "C:\_YES_POLITES"
 
 Page Directory
