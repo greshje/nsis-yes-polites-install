@@ -1,1 +1,1 @@
-call makensis /V4 nsis-yes-installer.nsi
+call makensis /V4 nsis-yes-polites-installer.nsi
