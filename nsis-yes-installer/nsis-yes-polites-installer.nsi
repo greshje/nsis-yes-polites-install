@@ -42,9 +42,10 @@
 !define MVN_PATH "C:\_YES_POLITES\tools\mvn\apache-maven-3.6.3\bin;"
 !define BAT_PATH "C:\_YES_POLITES\tools\bat;"
 !define R_PATH "C:\_YES_POLITES\tools\r\R\R-4.2.3\bin;"
+!define SQL_SERVER_DLL_PATH "C:\_YES_POLITES\databases\sqlserver\sqljdbc_12.6.2.0_enu\sqljdbc_12.6\enu\auth\x64;"
 
 # definitions
-Outfile "YesPolitesInstaller-1.0.002.exe"
+Outfile "YesPolitesInstaller-1.0.016.exe"
 InstallDir "C:\_YES_POLITES"
 
 Page Directory
@@ -213,7 +214,30 @@ Section
 		Call RegPrependString
 		Pop $0
 		DetailPrint "RegPrependString:Error=$0 (Should be 0)"
+
+		#
+		# SQL_SERVER_DLL_PATH
+		#
 	
+		# remove ${SQL_SERVER_DLL_PATH} from path
+		DetailPrint ""
+		DetailPrint "Removing existing instance of SQL_SERVER_DLL_PATH from Path"
+		EnVar::DeleteValue "Path" "${SQL_SERVER_DLL_PATH}"
+		Pop $0
+		DetailPrint "EnVar::Check returned=|$0| (should be 0)"  
+
+		# prepend our ${SQL_SERVER_DLL_PATH} to the path env variable
+		DetailPrint ""
+		DetailPrint "Prepending ${SQL_SERVER_DLL_PATH}"
+		Push ${HKEY_CURRENT_USER}
+		Push "Environment"
+		Push "Path"
+		Push ";"
+		Push "${SQL_SERVER_DLL_PATH}"
+		Call RegPrependString
+		Pop $0
+		DetailPrint "RegPrependString:Error=$0 (Should be 0)"
+
 		#
 		# configure git to use the installed certificate
 		#
@@ -227,12 +251,12 @@ Section
 		DetailPrint "$1"
 	
 		#
-		# run jv 8 (this is required for some EC2 Windows servers)
+		# run jv 11 (this is required for Polites)
 		#
 
 		DetailPrint ""		
 		DetailPrint "Setting default JVM..."
-		Exec '$InstDir\tools\bat\jv.bat 8'
+		Exec '$InstDir\tools\bat\jv.bat 11'
 		Pop $0
 		Pop $1
 		DetailPrint "RegPrependString:Error=$0 (Should be 0)"
