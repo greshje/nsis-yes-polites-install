@@ -45,7 +45,7 @@
 !define SQL_SERVER_DLL_PATH "C:\_YES_POLITES\databases\sqlserver\sqljdbc_12.6.2.0_enu\sqljdbc_12.6\enu\auth\x64;"
 
 # definitions
-Outfile "YesPolitesInstaller-1.0.018.exe"
+Outfile "YesPolitesInstaller-1.0.019.exe"
 InstallDir "C:\_YES_POLITES"
 
 Page Directory
