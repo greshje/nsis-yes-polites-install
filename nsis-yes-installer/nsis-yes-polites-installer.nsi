@@ -41,11 +41,11 @@
 !define GIT_PATH "C:\_YES_POLITES\tools\git\Git-2.27.0\bin;"
 !define MVN_PATH "C:\_YES_POLITES\tools\mvn\apache-maven-3.6.3\bin;"
 !define BAT_PATH "C:\_YES_POLITES\tools\bat;"
-!define R_PATH "C:\_YES_POLITES\tools\r\R\R-4.2.3\bin;"
+!define R_PATH "C:\_YES_POLITES\tools\r\R\R-4.4.1\bin;"
 !define SQL_SERVER_DLL_PATH "C:\_YES_POLITES\databases\sqlserver\sqljdbc_12.6.2.0_enu\sqljdbc_12.6\enu\auth\x64;"
 
 # definitions
-Outfile "YesPolitesInstaller-1.2.055.exe"
+Outfile "YesPolitesInstaller-1.2.061.exe"
 InstallDir "C:\_YES_POLITES"
 
 Page Directory
